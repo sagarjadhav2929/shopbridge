@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "shopbridge",
+		"_postman_id": "364477fc-94a3-f6fc-e806-0e5f775ed401",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products List",
+			"request": {
+				"url": "http://127.0.0.1:8000/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Product Details",
+			"request": {
+				"url": "http://127.0.0.1:8000/product/mackbook-air",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product",
+			"request": {
+				"url": "http://127.0.0.1:8000/product-edit/mackbook-air",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_name\": \"Mackbook Air\",\n    \"price\": \"111000.00\",\n    \"status\": \"active\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"url": "http://127.0.0.1:8000/product-create/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_name\": \"Mackbook Air - 1\",\n    \"slug\": \"mackbook-air-1\",\n    \"price\": \"113000.00\",\n    \"status\": \"active\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"url": "http://127.0.0.1:8000/product-delete/test-product",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
